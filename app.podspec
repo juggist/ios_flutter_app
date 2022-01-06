@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
  spec.name     = "app"
  #版本号
- spec.version   = "0.0.3"
+ spec.version   = "0.0.4"
  spec.summary   = "A short description of app."
 
  # This description is used to generate tags and improve search results.
@@ -140,6 +140,6 @@ Pod::Spec.new do |spec|
  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
  
  #把生成的framework（本例为App.xcframework）放在同级目录下，稍后会提到
- spec.ios.vendored_frameworks = 'App.xcframework', 'Flutter.xcframework'
-
+ spec.ios.vendored_frameworks = 'App.xcframework'
+ spec.vendored_frameworks = 'Flutter.xcframework'
 end
